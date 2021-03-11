@@ -16,5 +16,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (array === undefined || array.length === 0) {
+    return 0;
+  } else {
+    let count = array.reduce((accumulator, index) => {
+      return (accumulator + index);
+    });
+    return (count / array.length).toFixed(2);
+  }
 }
