@@ -8,7 +8,11 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (array === undefined || array.length === 0) {
+    return 0;
+  } else {
+    return Math.max.apply(null, array);
+  }
 }
 
 exports.avg = function avg (array) {
